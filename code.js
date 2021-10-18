@@ -31,6 +31,8 @@ basic.forever(function () {
     for (let index = 0; index <= SnakeCellsX.length; index++) {
         if (SnakeCellsX[index] == headX) {
             if (SnakeCellsY[index] == headY) {
+                fruitX = -1
+                fruitY = -1
                 while (true) {
                     basic.showString("Game Over!")
                 }
@@ -39,6 +41,8 @@ basic.forever(function () {
     }
     if (headX >= 5 || headY >= 5 || (headY <= -1 || headX <= -1)) {
         while (true) {
+            fruitX = -1
+            fruitY = -1
             basic.showString("Game Over!")
         }
     }
